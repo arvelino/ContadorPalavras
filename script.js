@@ -9,22 +9,9 @@ btn.addEventListener("click", function(){
     let letras = texto.value.replace(/\s+/g,"")
     let palavra = texto.value.replace(/\s+/g,",")
     let text = palavra.split(",")
-    qtdep=text.length
+    qtdep = text.length
     //qtdep = somaPalavra(0, text)
     qtdel = letras.length
     
     alert(`${text.length} {${letras}} - O texto possue ${qtdel} letras em ${qtdep} palavras`)
 })
-
-
-function somaPalavra(cont, texto){
-    //Loop para retirar os espaços e contar as palavras
-    for(let i=0;i < texto.length;i++){
-        if(texto[i]!= "" && texto!="" || texto[i] == /\s+/g ){
-            cont++
-            //alert(cont)
-        }
-        
-    }
-    return cont
-}
