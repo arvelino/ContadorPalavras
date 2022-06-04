@@ -7,50 +7,56 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Contador de Palavras</title>
+
 </head>
-<body class="container-fluid">
+<body class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-            <span class="fs-4">Contador de Palavras</span>
+        <a href="index.html" class="logo px-5">
+            <span class="logo-titulo">Markelovers</span>
           </a>
           <ul class="nav nav-pills">
-            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Contador</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Plágio</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
           </ul>   
     </header>
-    <section class="d-flex">
-        <div class="container">
-            <textarea placeholder="Começe a digita, ou colar o texto aqui..." class="txtarea form-control" name="txtarea" id="txta" rows="10" style="resize: none; overflow: auto; opacity: 1; height: 375px;"></textarea>
-            <button class="btn btn-primary btn-block" id="btn-calc">Calcular</button>
-            
+    <section class="painel-calculo row">
+        <div class="painel-txt container-fluid col-sm-8">
+            <textarea placeholder="Começe a digita, ou colar o texto aqui..." class="txtarea form-control" name="txtarea" id="txta"></textarea>            
         </div>
-        <div class="container" id="resultado">
-            <div>
-                <h3 class="panel-title">
-                    <a href="#" class="accordion-toggle">
-                        Metricas
-                    </a>
+
+        <div class="painel-resul container-fluid col-sm-4 py-4 mb-4" id="resultado">
+            <div class="container cont-metrica">
+                <h3 class="painel-title" data-bs-toggle="collapse" data-bs-target="#listMetrica">
+                        <a class="title" href="#" >Métricas</a>
                 </h3>
-                <ul class="list-group">
-                    <li class="list-group-item">Palavras <span class="badge" id="resulPlv"></span></li>
-                    <li class="list-group-item">Caracteres <span class="badge" id="resulCar"></span></li>
+                <ul class="list-group collapse show lista" id="listMetrica">
+                    <li class="list-group-item list-item">Palavras <span class="resul" id="resulPlv"></span></li>
+                    <li class="list-group-item list-item">Caracteres <span class="resul" id="resulCar"></span></li>
                 </ul>
             </div>
-            <div></div>  
+
+            <div class="container">
+                <h3 class="painel-title" data-bs-toggle="collapse" data-bs-target="#listDensidade">
+                    <a class="title" href="#" >Densidade de Palavras</a>
+                </h3>
+                <ul class="list-group collapse show" id="listDensidade">                    
+                </ul>
+            </div>  
         </div>
     </section>
-    <footer></footer>
+    <section class="container py-3">
+        <h2>Métrica de produção de conteúdo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio facere quos sunt, mollitia repellat neque dolor obcaecati accusantium quidem saepe quibusdam esse iste atque ipsa, et, recusandae minus velit culpa!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum ratione neque asperiores amet quibusdam quae molestiae distinctio voluptatibus, eveniet suscipit voluptates ea quas accusantium nobis minus. Earum, quis id?</p>
+    </section>
 
-    
-    
-    
-
-    
+    <footer class="footer">
+        <p>&COPY; Direitos reservados</p>
+    </footer>
+     
     <script src="script.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    </script>
+    
 </body>
 </html>

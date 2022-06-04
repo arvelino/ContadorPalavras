@@ -5,17 +5,16 @@ let qtdel = 0
 let palavra =""
 let qtde = 0
 let soma = 0
-const conectivos = ["de"]
-const btn = document.querySelector("#btn-calc")
-//let txt = texto.value
-btn.addEventListener("click", function(){
+let para = ""
+const btn = document.querySelector("#txta")
+
+btn.addEventListener("keyup", function(){
     let letras = texto.value.replace(/\s+/g,"") //retira os espaços da string
     let virgulas = texto.value.replace(/\.+/g,"")
     virgulas = virgulas.replace(/\,+/g,"")
     virgulas = virgulas.replace(/\;+/g,"")
     virgulas = virgulas.replace(/\"+/g,"")
     let palavras = virgulas.replace(/\s+/g,"--")//substitui os espaços por dois traços
-    
     let text = palavras.split("--") //transforma a string em array
     qtdep = text.length
     qtdel = letras.length
@@ -23,23 +22,31 @@ btn.addEventListener("click", function(){
     printResul(unique)
 })
 
-
 function printResul(matriz){
-    res.innerHTML = ""
-    let para = document.createElement("p")
-    para.innerHTML = ` Palavras: ${qtdep}<br>`
-    para.innerHTML += `Letras: ${qtdel}<br>`
+    let resul = document.querySelectorAll(".resul")
+    let desid = document.querySelector("#listDensidade")
+    desid.innerHTML =""
+    resul[0].innerHTML = qtdep
+    resul[1].innerHTML = qtdel
+    para = document.createElement("li")
+    para.setAttribute("class","list-group-item")
+
     if(matriz.length>10){
         for(let z =0; z<10; z++){
+            para = document.createElement("li")
+            para.setAttribute("class","list-group-item")
             para.innerHTML += `${matriz[z].palavra}: ${matriz[z].qtde} - ${matriz[z].porc}% <br>`
+            desid.appendChild(para)
         }
     }else{
         for(let z in matriz){
+            para = document.createElement("li")
+            para.setAttribute("class","list-group-item")
             para.innerHTML += `${matriz[z].palavra}: ${matriz[z].qtde} - ${matriz[z].porc}% <br>`
+            desid.appendChild(para)
         }
     }
-          
-    res.appendChild(para)    
+    
 }
 
 function tratar(valor){
@@ -70,7 +77,6 @@ function tratar(valor){
         unitario[j].porc = Math.round(soma/valor.length*100)
         soma = 0
     }
-
 
     unitario.sort(function(a,b){return b.qtde - a.qtde})// Classifica o array pela maior quantidade
 
