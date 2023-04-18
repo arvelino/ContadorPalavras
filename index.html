@@ -12,17 +12,20 @@
 <body class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="index.html" class="logo px-5">
-            <span class="logo-titulo">Contador de palavras</span>
-          </a>
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Contador</a></li>
-            <li class="nav-item" id="menu-plagio"><a href="#" class="nav-link">Plágio</a></li>
-            <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-          </ul>   
+            <span class="logo-titulo">Densidade do texto</span>
+            <span class="linha-logo"></span>
+        </a>
+        <nav class="nav">
+            <ul class="nav-menu nav-pills">
+                <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Contador</a></li>
+                <li class="nav-item" id="menu-plagio"><a href="#" class="nav-link">Plágio</a></li>
+                <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+            </ul>
+        </nav>
     </header>
     <section class="painel-calculo row">
         <div class="painel-txt container-fluid col-sm-8">
-            <textarea placeholder="Começe a digita, ou colar o texto aqui..." class="txtarea form-control" name="txtarea" id="txta"></textarea>            
+            <textarea placeholder="Digite ou cole o texto aqui..." class="txtarea form-control" name="txtarea" id="txta"></textarea>            
         </div>
 
         <div class="painel-resul container-fluid col-sm-4 py-4 mb-4" id="resultado">
