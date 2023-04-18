@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Contador de Palavras</title>
 
@@ -12,12 +12,12 @@
 <body class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="index.html" class="logo px-5">
-            <span class="logo-titulo">Markelovers</span>
+            <span class="logo-titulo">Contador de palavras</span>
           </a>
           <ul class="nav nav-pills">
             <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Contador</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Plágio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+            <li class="nav-item" id="menu-plagio"><a href="#" class="nav-link">Plágio</a></li>
+            <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
           </ul>   
     </header>
     <section class="painel-calculo row">
@@ -31,12 +31,12 @@
                         <a class="title" href="#" >Métricas</a>
                 </h3>
                 <ul class="list-group collapse show lista" id="listMetrica">
-                    <li class="list-group-item list-item">Palavras <span class="resul" id="resulPlv"></span></li>
-                    <li class="list-group-item list-item">Caracteres <span class="resul" id="resulCar"></span></li>
+                    <li class="list-group-item list-item">Palavras:  <span class="resul" id="resulPlv"></span></li>
+                    <li class="list-group-item list-item">Caracteres:  <span class="resul" id="resulCar"></span></li>
                 </ul>
             </div>
 
-            <div class="container">
+            <div class="container densidade cont-metrica">
                 <h3 class="painel-title" data-bs-toggle="collapse" data-bs-target="#listDensidade">
                     <a class="title" href="#" >Densidade de Palavras</a>
                 </h3>
@@ -45,17 +45,32 @@
             </div>  
         </div>
     </section>
-    <section class="container py-3">
-        <h2>Métrica de produção de conteúdo</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio facere quos sunt, mollitia repellat neque dolor obcaecati accusantium quidem saepe quibusdam esse iste atque ipsa, et, recusandae minus velit culpa!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum ratione neque asperiores amet quibusdam quae molestiae distinctio voluptatibus, eveniet suscipit voluptates ea quas accusantium nobis minus. Earum, quis id?</p>
+
+    <section class="container py-3 " id="blog">
+        <h3 class="text-menu-terciario">Blog -</h3>
+        <h3>Métrica de produção de conteúdo</h3>
+        <p>A densidade de palavras em um texto SEO se refere à frequência com que uma palavra-chave específica aparece em um texto. Essa métrica é importante porque o Google usa o conteúdo do texto para entender o que o site trata e, em seguida, classificá-lo nos resultados de pesquisa.</p>
+
+        <p>No entanto, é importante equilibrar a densidade de palavras-chave com a qualidade e a relevância do conteúdo para garantir que o texto seja legível e agradável para os usuários, sem parecer spam. O Google também pode penalizar os sites que abusam da densidade de palavras-chave em seus textos.</p>
+
+        <p>Portanto, é recomendado seguir as seguintes práticas recomendadas:</p>
+
+        <ul>
+            <li>Use a palavra-chave de forma natural: Tente usar a palavra-chave de forma natural, incorporando-a ao texto sem que pareça forçada.</li>
+            <li>Use sinônimos e variações: Além da palavra-chave, use sinônimos e variações para tornar o texto mais rico e diverso, sem comprometer a relevância.</li>
+            <li>Priorize a qualidade do conteúdo: O conteúdo deve ser útil, relevante e de qualidade para os usuários, não apenas para os motores de busca.</li>
+            <li>Considere o tamanho do texto: Textos mais longos permitem uma densidade de palavras-chave mais baixa, enquanto textos mais curtos precisam ser mais precisos com a escolha das palavras.</li>
+            <li>Evite spam de palavras-chave: Não use a palavra-chave repetidamente apenas para aumentar a densidade, pois isso pode ser penalizado pelo Google e também diminuir a experiência do usuário.</li>
+            <li>Em resumo, a densidade de palavras-chave é importante para a otimização de SEO, mas deve ser balanceada com outras práticas recomendadas para garantir que o conteúdo seja útil e agradável para o usuário e também relevante para o Google.</li>
+        </ul>
     </section>
 
     <footer class="footer">
-        <p>&COPY; Direitos reservados</p>
+        <p>&COPY; Direitos reservados - Robson Arvelino</p>
+        
     </footer>
      
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
 </body>

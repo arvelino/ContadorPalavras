@@ -16,16 +16,31 @@ body{
 #txta{
     resize:none; overflow: auto; opacity:1; height: 350px;box-shadow: 1px 0.5px 10px;
 }
-.painel-title{
+
+.cont-metrica{
+    border: solid rgba(0, 0, 0, 0.63);
     background-color: rgb(224, 224, 224);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.painel-title{
+    text-align: center;
 }
 .title{
     text-decoration: none;
     font-size: 14pt;
     color:black;
 }
+.list-item{
+    margin-top: 5px;
+}
 .title:hover{
     color: cadetblue;
+}
+.text-menu-terciario{
+    font-size: 16px;
 }
 
 .footer{

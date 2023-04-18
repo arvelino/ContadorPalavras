@@ -5,10 +5,10 @@ let qtdel = 0
 let palavra =""
 let qtde = 0
 let soma = 0
-let para = ""
+let paragrafo = ""
 const btn = document.querySelector("#txta")
 
-btn.addEventListener("keyup", function(){
+btn.addEventListener("keyup", ()=> {
     let letras = texto.value.replace(/\s+/g,"") //retira os espaços da string
     let virgulas = texto.value.replace(/\.+/g,"")
     virgulas = virgulas.replace(/\,+/g,"")
@@ -28,22 +28,22 @@ function printResul(matriz){
     desid.innerHTML =""
     resul[0].innerHTML = qtdep
     resul[1].innerHTML = qtdel
-    para = document.createElement("li")
-    para.setAttribute("class","list-group-item")
+    paragrafo = document.createElement("li")
+    paragrafo.setAttribute("class","list-group-item")
 
     if(matriz.length>10){
         for(let z =0; z<10; z++){
-            para = document.createElement("li")
-            para.setAttribute("class","list-group-item")
-            para.innerHTML += `${matriz[z].palavra}: ${matriz[z].qtde} - ${matriz[z].porc}% <br>`
-            desid.appendChild(para)
+            paragrafo = document.createElement("li")
+            paragrafo.setAttribute("class","list-group-item")
+            paragrafo.innerHTML += `${matriz[z].palavra}: ${matriz[z].qtde} - ${matriz[z].porc}% <br>`
+            desid.appendChild(paragrafo)
         }
     }else{
         for(let z in matriz){
-            para = document.createElement("li")
-            para.setAttribute("class","list-group-item")
-            para.innerHTML += `${matriz[z].palavra}: ${matriz[z].qtde} - ${matriz[z].porc}% <br>`
-            desid.appendChild(para)
+            paragrafo = document.createElement("li")
+            paragrafo.setAttribute("class","list-group-item list-item")
+            paragrafo.innerHTML += `${matriz[z].palavra}: ${matriz[z].qtde} - ${matriz[z].porc}% <br>`
+            desid.appendChild(paragrafo)
         }
     }
     
@@ -82,5 +82,11 @@ function tratar(valor){
 
     // alert(unitario[0].palavra)
     return unitario
+}
+
+const menuPlagio = document.querySelector('#menu-plagio')
+console.log(menuPlagio)
+menuPlagio.onclick = function(){
+    alert('Em construção!')
 }
 
