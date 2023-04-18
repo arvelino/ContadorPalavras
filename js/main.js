@@ -85,7 +85,6 @@ function tratar(valor){
 }
 
 const menuPlagio = document.querySelector('#menu-plagio')
-console.log(menuPlagio)
 menuPlagio.onclick = function(){
     alert('Em construção!')
 }
