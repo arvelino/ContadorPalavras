@@ -1,5 +1,5 @@
 body{
-    font-family:"Nunica",sans-serif;
+    font-family:'Raleway',sans-serif;
     font-size: 12pt;
 }
 .logo{
@@ -95,7 +95,9 @@ body{
     padding: 20px;
     margin: auto;
     text-align: center;
-    background-color: black;
+    background-color: rgb(78, 78, 78);
+    color: white;
+    font-weight: 500;
 }
 
 /* ******** Media Screen *******/
