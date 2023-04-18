@@ -42,7 +42,7 @@ function printResul(matriz){
         for(let z in matriz){
             paragrafo = document.createElement("li")
             paragrafo.setAttribute("class","list-group-item list-item")
-            paragrafo.innerHTML += `${matriz[z].palavra}: ${matriz[z].qtde} - ${matriz[z].porc}% <br>`
+            paragrafo.innerHTML += `${matriz[z].palavra} : ${matriz[z].qtde} [ ${matriz[z].porc}% ] <br>`
             desid.appendChild(paragrafo)
         }
     }
