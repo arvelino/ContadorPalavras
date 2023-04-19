@@ -16,8 +16,8 @@ O Site realiza a contagem das palavras e letras contidas no texto.
 ## Como usar
 1. Acesse o site https://contador-palavras.vercel.app/index.html
 2. Insira o texto que deseja contar as palavras na caixa de texto.
-3. Clique no botão "Contar Palavras".
-4. A contagem de palavras aparecerá abaixo do botão.
+3. Os cálculo será realizado automaticamente.
+4. Consulte os resultados nos blocos "Métricas" e "Densidade".
 
 ## Stack utilizada
 
